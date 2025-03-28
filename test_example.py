@@ -9,7 +9,7 @@ import pytest
 @allure.tag("Тег")
 @allure.label("priority", "1 - High")
 @allure.label("service", "Monitoring Service")
-@allure.owner("qartavtsev_admin")
+@allure.label("owner", "qartavtsev_admin")  # Используем label вместо owner
 @pytest.mark.parametrize("random_fail", [random.choice([True, False])])
 def test_example(random_fail):
     allure.step("Обычный шаг 1")
