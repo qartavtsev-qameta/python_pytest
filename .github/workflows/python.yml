@@ -15,16 +15,16 @@ env:
 # Триггеры для запуска workflow
 on:
 # по расписанию
-  schedule:
-    - cron: "0 0 * * *"
+#  schedule:
+#    - cron: "0 0 * * *"
 
 # пуш и пулл реквест
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+#  push:
+#    branches:
+#      - main
+#  pull_request:
+#    branches:
+#      - main
      
 # вручную    
   workflow_dispatch:
