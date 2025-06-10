@@ -30,3 +30,29 @@ def test_sum():
     allure.dynamic.parameter("sum", ttl)
 
     assert x + y == ttl, f"Expected {x} + {y} == {ttl}"
+
+@allure.title("Test case example for NBC Universal - dynamic parameter - MASKED")
+def test_sum_masked():
+    x = 1
+    y = 2
+    ttl = 3
+
+    allure.dynamic.parameter("x", x)
+    allure.dynamic.parameter("y", y)
+    allure.dynamic.parameter("sum", ttl)
+    allure.parameter_mode.MASKED
+
+    assert x + y == ttl, f"Expected {x} + {y} == {ttl}"
+
+@allure.title("Test case example for NBC Universal - dynamic parameter - HIDDEN")
+def test_sum_hidden():
+    x = 1
+    y = 2
+    ttl = 3
+
+    allure.dynamic.parameter("x", x)
+    allure.dynamic.parameter("y", y)
+    allure.dynamic.parameter("sum", ttl)
+    allure.parameter_mode.HIDDEN
+
+    assert x + y == ttl, f"Expected {x} + {y} == {ttl}"
