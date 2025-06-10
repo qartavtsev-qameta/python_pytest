@@ -1,13 +1,14 @@
 import allure
 import pytest
 
+@pytest.mark.parametrize("username", ["John", "Alice"])
 @allure.tag("Tag 1", "Tag 2", "Tag 3")
-@allure.title("Test case example for NBC Universal")
+@allure.title("Test case example for NBC Universal - {username}")
 @allure.label("owner", "John Smith")
 @allure.label("priority", "1 - High")
 @allure.label("service", "Authentication Service")
 @allure.feature("Authentication")
-def test_example():
+def test_example(username):
     with allure.step("Step 1"):
         pass
     with allure.step("Step 2"):
