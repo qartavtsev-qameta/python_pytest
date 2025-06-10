@@ -19,11 +19,14 @@ def test_example(username):
     with allure.step("Step 3"):
         pass
 
-@allure.title("Test case example for NBC Universal - dynamic parameter"
+@allure.title("Test case example for NBC Universal - dynamic parameter")
 def test_sum():
     x = 1
     y = 2
     ttl = 3
+
     allure.dynamic.parameter("x", x)
     allure.dynamic.parameter("y", y)
     allure.dynamic.parameter("sum", ttl)
+
+    assert x + y == ttl, f"Expected {x} + {y} == {ttl}"
