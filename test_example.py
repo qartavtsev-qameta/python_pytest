@@ -39,10 +39,10 @@ def test_sum_masked():
 
     allure.dynamic.parameter("x", x)
     allure.dynamic.parameter("y", y)
-    allure.dynamic.parameter("sum", ttl)
-    allure.parameter_mode.MASKED
+    allure.dynamic.parameter("sum", ttl, mode=allure.parameter_mode.MASKED)
 
     assert x + y == ttl, f"Expected {x} + {y} == {ttl}"
+
 
 @allure.title("Test case example for NBC Universal - dynamic parameter - HIDDEN")
 def test_sum_hidden():
@@ -52,7 +52,8 @@ def test_sum_hidden():
 
     allure.dynamic.parameter("x", x)
     allure.dynamic.parameter("y", y)
-    allure.dynamic.parameter("sum", ttl)
-    allure.parameter_mode.HIDDEN
+    allure.dynamic.parameter("sum", ttl, mode=allure.parameter_mode.HIDDEN)
+
+    assert x + y == ttl, f"Expected {x} + {y} == {ttl}"
 
     assert x + y == ttl, f"Expected {x} + {y} == {ttl}"
